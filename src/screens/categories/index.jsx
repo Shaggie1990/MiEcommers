@@ -4,7 +4,7 @@ import { CategoryItem } from '../../components';
 import CATEGORIES from '../../constants/data/categories.json';
 import { styles } from './styles';
 
-function Categories({onSelectCategory}) {
+function Categories({ onSelectCategory }) {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.container}>
@@ -12,7 +12,14 @@ function Categories({onSelectCategory}) {
                     data={CATEGORIES}
                     style={styles.categoryContainer}
                     contentContainerStyle={styles.listCategory}
-                    renderItem={({ item }) => <CategoryItem {...item} onSelectCategory={onSelectCategory} />}
+                    renderItem={({ item }) => (
+                        <CategoryItem
+                            {...item}
+                            onSelectCategory={() =>
+                                onSelectCategory({ categoryId: item.id, color: item.backgroundColor })
+                            }
+                        />
+                    )}
                     keyExtractor={(item) => item.id}
                     showsVerticalScrollIndicator={false}
                 />
@@ -20,5 +27,4 @@ function Categories({onSelectCategory}) {
         </SafeAreaView>
     );
 }
-
 export default Categories;
