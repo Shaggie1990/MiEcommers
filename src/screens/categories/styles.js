@@ -1,8 +1,5 @@
-import { StyleSheet } from "react-native";
-
-import { COLORS } from "../../themes";
-
-
+import { StyleSheet } from 'react-native';
+import { COLORS } from '../../themes';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -15,5 +12,8 @@ export const styles = StyleSheet.create({
     listCategory: {
         gap: 15,
         paddingBottom: 20,
+    },
+    categoryItemLandscape: {
+        height: 100,
     },
 });
