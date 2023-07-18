@@ -1,10 +1,7 @@
 import { useFonts } from "expo-font";
-import { useState } from "react";
-import { SafeAreaView, StyleSheet, View, Text, Button, ActivityIndicator } from "react-native";
+import { SafeAreaView, StyleSheet, View, ActivityIndicator } from "react-native";
 
-import { Header } from "./components";
 import RootNavigator from "./navigations";
-import { Categories, Products } from "./screens";
 import { FONTS, COLORS } from "./themes";
 
 // const categoryDefault = {
