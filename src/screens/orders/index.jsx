@@ -2,12 +2,12 @@ import { View, Text } from "react-native";
 
 import { styles } from "./styles";
 
-const Cart = () => {
+const Orders = () => {
   return (
     <View style={styles.container}>
-      <Text>Cart</Text>
+      <Text>Orders</Text>
     </View>
   );
 };
 
-export default Cart;
+export default Orders;
